@@ -9,9 +9,9 @@ export default function Header() {
   let button;
 
   if (session) {
-    button = <button className="btn btn-secondary" onClick={signOut}>Logout</button>;
+    button = <button className="btn btn-secondary" onClick={() => signOut()}>Logout</button>;
   } else {
-    button = <button className="btn btn-primary" onClick={signIn}>Login</button>;
+    button = <button className="btn btn-primary" onClick={() => signIn()}>Login</button>;
   }
 
   return (
@@ -28,10 +28,10 @@ export default function Header() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" href="/">Home <span className="sr-only">(current)</span></a>
+                  <a className="nav-link active" href="/">Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="dashboard">Movies</a>
+                  <a className="nav-link" href="dashboard">Dashboard</a>
                 </li>
               </ul>
               <form className="d-flex">

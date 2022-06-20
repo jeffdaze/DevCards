@@ -19,7 +19,7 @@ export default function Dashboard() {
   return (
     <div className="container">
       <Head>
-        <title>Movies By Nik - Find Your Next Movie</title>
+        <title>DevCards</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
