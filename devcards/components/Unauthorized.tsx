@@ -1,16 +1,15 @@
 import { signIn } from 'next-auth/react'
+import OktaWrapper from './OktaWrapper'
 
 export default function Unauthorized() {
 
   return (
-    <div className="row">
-      <div className="col-lg-10 col-offset-1">
-        <p>Hey There, looks like you reached an area you don't have access to.</p>
+    <div>
+      <p>You are not logged in!</p>
 
-        <p>Please sign in here.</p>
+      <p>Please sign in here:</p>
 
-        <p><button className="btn btn-secondary" onClick={signIn}>Sign in</button></p>
-      </div>
+      <p><button onClick={() => signIn()}>Sign in</button></p>
     </div>
   )
 }

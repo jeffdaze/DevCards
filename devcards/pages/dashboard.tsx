@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 import Header from '../components/Header'
 import Unauthorized from '../components/Unauthorized'
-import Movies from '../components/Movies'
+import UserDashboard from '../components/UserDashboard'
 
 import { useSession } from 'next-auth/react'
 
@@ -14,7 +14,7 @@ export default function Dashboard() {
   const { data: session, status } = useSession();
   const loading = status === "loading";
 
-  var content = session ? <Movies></Movies> : <Unauthorized></Unauthorized>
+  var content = session ? <UserDashboard></UserDashboard> : <Unauthorized></Unauthorized>
 
   return (
     <div className="container">
